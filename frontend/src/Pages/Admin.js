@@ -29,7 +29,7 @@ const Admin = () => {
     let formData = new FormData();
     formData.append("product", image);
 
-    await fetch("https://e-commerse-1-ja7t.onrender.com/upload", {
+    await fetch("https://e-commerse-1-qck4.onrender.com/upload", {
       method: "POST",
       headers: {
         Accept: "application.json",
@@ -43,7 +43,7 @@ const Admin = () => {
     if (responseData.success) {
       product.image = responseData.image_url;
       console.log(product);
-      await fetch("https://e-commerse-1-ja7t.onrender.com/addproduct", {
+      await fetch("https://e-commerse-1-qck4.onrender.com/addproduct", {
         method: "POST",
         headers: {
           Accept: "application/json",
