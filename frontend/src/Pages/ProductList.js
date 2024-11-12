@@ -8,7 +8,9 @@ const ProductList = () => {
 
   const fetchInfo = async () => {
     try {
-      const res = await fetch("http://localhost:4000/allproducts");
+      const res = await fetch(
+        "https://e-commerse-1-ja7t.onrender.com/allproducts"
+      );
       const data = await res.json();
       setAllProducts(data || []); // Ensure data is an array
     } catch (error) {
@@ -22,7 +24,7 @@ const ProductList = () => {
   }, []);
 
   const removeProduct = async (id) => {
-    await fetch("http://localhost:4000/removeproduct", {
+    await fetch("https://e-commerse-1-ja7t.onrender.com/removeproduct", {
       method: "POST",
       headers: {
         Accept: "application/json",

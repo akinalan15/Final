@@ -19,7 +19,7 @@ const Signup = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:4000/signup", {
+      const res = await fetch("https://e-commerse-1-ja7t.onrender.com/signup", {
         method: "POST",
         headers: {
           "content-Type": "application/json",
