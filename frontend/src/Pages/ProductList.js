@@ -9,7 +9,7 @@ const ProductList = () => {
   const fetchInfo = async () => {
     try {
       const res = await fetch(
-        "https://e-commerse-1-ja7t.onrender.com/allproducts"
+        "https://https://e-commerse-1-qck4.onrender.com/allproducts"
       );
       const data = await res.json();
       setAllProducts(data || []); // Ensure data is an array
