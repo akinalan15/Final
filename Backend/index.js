@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -14,7 +13,7 @@ app.use(cors());
 
 // Database Connection with mongodb
 
-mongoose.connect("mongodb://localhost:27017");
+mongoose.connect("mongodb://localhost:5000");
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
