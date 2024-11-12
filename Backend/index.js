@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const multer = require("multer");
@@ -13,13 +13,11 @@ app.use(cors());
 
 // Database Connection with mongodb
 
-mongoose.connect("mongodb://localhost:5000");
-
-const JWT_SECRET = process.env.JWT_SECRET;
+mongoose.connect("mongodb://localhost:27017");
 
 // API creation
 app.get("/", (req, res) => {
-  res.send("server is running at 5000");
+  res.send("server is running at 4000");
 });
 // Image storage
 
@@ -207,7 +205,7 @@ app.post("/login", async (req, res) => {
 });
 
 //port assign
-app.listen(process.env.PORT || 5000, (error) => {
+app.listen(PORT, (error) => {
   if (!error) {
     console.log("server is running At port:" + PORT);
   } else {
